@@ -11,6 +11,9 @@ fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
 
     // Expand wildcards and @argfiles:
     let args = clientele::args_os()?;
+    if args.len() < 2 {
+        return Ok(EX_USAGE);
+    }
 
     // Configure tracing & logging:
     #[cfg(feature = "tracing")]
