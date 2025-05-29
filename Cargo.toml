@@ -1,0 +1,56 @@
+# See: https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "asimov-jq-module"
+version = "0.0.0"
+authors = ["ASIMOV Protocol <support@asimov.so>"]
+edition = "2024"
+#rust-version = "1.85"
+description = "ASIMOV module for JSON transformation using the jq filter language."
+#documentation = "https://docs.rs/asimov-jq-module"
+readme = true
+homepage = "https://github.com/asimov-modules"
+repository = "https://github.com/asimov-modules/asimov-jq-module"
+license = "Unlicense"
+keywords = ["asimov-module", "asimov", "ai"]
+categories = [
+    "command-line-utilities",
+    "template-engine",
+    "text-processing",
+    "value-formatting",
+    "encoding",
+]
+publish = true
+
+[features]
+default = ["all", "cli", "std"]
+all = ["tracing"]
+cli = ["std", "dep:tracing-subscriber"]
+std = [
+    "asimov-module/std",
+    "jq/std",
+    "tracing?/std",
+    "tracing-subscriber?/fmt",
+    "tracing-subscriber?/std",
+]
+tracing = ["dep:tracing"]
+unstable = []
+
+[dependencies]
+asimov-module = { version = "25.0.0-dev.8", default-features = false }
+jq = { version = "0.1", default-features = false, features = ["all"] }
+tracing = { version = "0.1", default-features = false, optional = true }
+tracing-subscriber = { version = "0.3", default-features = false, features = [
+    "alloc",
+    "tracing-log",
+], optional = true }
+
+[profile.release]
+opt-level = "z"
+strip = true
+lto = "thin"
+
+[[bin]]
+name = "asimov-jq-runner"
+path = "src/main.rs"
+required-features = ["cli"]
