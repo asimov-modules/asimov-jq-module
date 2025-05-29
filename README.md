@@ -6,6 +6,12 @@
 
 [ASIMOV] module for JSON transformation using the [jq] filter language.
 
+## ✨ Features
+
+- Transforms JSON inputs using the [jq] programming language.
+- Supports values from environment variables using the `env.USER` syntax.
+- Loads environment variables from `.env` (aka dotenv) files.
+
 ## 🛠️ Prerequisites
 
 - [Rust](https://rust-lang.org) 1.85+ (2024 edition)
@@ -20,9 +26,17 @@ cargo install asimov-jq-module
 
 ## 👉 Examples
 
+### Transforming JSON Input
+
 ```bash
-asimov-jq-runner
+asimov-jq-runner filter.jq < input.json > output.json
 ```
+
+## 📚 Reference
+
+### Installed Binaries
+
+- `asimov-jq-runner`: filters JSON from standard input to standard output
 
 ## 👨‍💻 Development
 
