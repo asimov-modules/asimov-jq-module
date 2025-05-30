@@ -25,35 +25,18 @@ publish = true
 [features]
 default = ["all", "cli", "std"]
 all = ["tracing"]
-cli = ["pretty", "std", "dep:clientele"]
-std = [
-    "asimov-module/std",
-    "clientele/std",
-    "jq/std",
-    "tracing?/std",
-    "tracing-subscriber?/fmt",
-    "tracing-subscriber?/std",
-]
+cli = ["asimov-module/cli", "pretty", "std"]
+std = ["asimov-module/std", "jq/std"]
+tracing = ["asimov-module/tracing"]
 unstable = []
 
 pretty = ["dep:colored_json"]
-tracing = ["dep:tracing", "dep:tracing-subscriber"]
 
 [dependencies]
-asimov-module = { version = "25.0.0-dev.8", default-features = false }
-clientele = { version = "0.3", default-features = false, features = [
-    "argfile",
-    "dotenv",
-    "wild",
-], optional = true }
+asimov-module = { version = "25.0.0-dev.9", default-features = false }
 colored_json = { version = "5", default-features = false, optional = true }
 jq = { version = "0.1", default-features = false, features = ["all"] }
 serde_json = { version = "1", default-features = false, features = ["alloc"] }
-tracing = { version = "0.1", default-features = false, optional = true }
-tracing-subscriber = { version = "0.3", default-features = false, features = [
-    "alloc",
-    "tracing-log",
-], optional = true }
 
 [profile.release]
 opt-level = "z"
@@ -62,5 +45,5 @@ lto = "thin"
 
 [[bin]]
 name = "asimov-jq-runner"
-path = "src/main.rs"
+path = "src/runner/main.rs"
 required-features = ["cli"]
