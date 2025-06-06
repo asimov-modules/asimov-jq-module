@@ -1,8 +1,8 @@
 # ASIMOV JQ Module
 
 [![License](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
-[![Compatibility](https://img.shields.io/badge/rust-1.85%2B-blue)](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/)
-[![Package](https://img.shields.io/crates/v/asimov-jq-module)](https://crates.io/crates/asimov-jq-module)
+[![Package on Crates.io](https://img.shields.io/crates/v/asimov-jq-module.svg)](https://crates.io/crates/asimov-jq-module)
+[![Package on PyPI](https://img.shields.io/pypi/v/asimov-jq-module.svg)](https://pypi.org/project/asimov-jq-module)
 
 [ASIMOV] module for JSON transformation using the [jq] filter language.
 
@@ -11,12 +11,19 @@
 - Transforms JSON inputs using the [jq] programming language.
 - Supports values from environment variables using the `env.USER` syntax.
 - Loads environment variables from `.env` (aka dotenv) files.
+- Distributed as a standalone static binary with zero runtime dependencies.
 
 ## 🛠️ Prerequisites
 
-- [Rust](https://rust-lang.org) 1.85+ (2024 edition)
+- [Rust] 1.85+ (2024 edition) if building from source code
 
 ## ⬇️ Installation
+
+### Installation from PyPI
+
+```bash
+pip install -U asimov-jq-module
+```
 
 ### Installation from Source Code
 
@@ -53,4 +60,6 @@ git clone https://github.com/asimov-modules/asimov-jq-module.git
 [![Share on LinkedIn](https://img.shields.io/badge/share%20on-linkedin-3949AB?logo=linkedin)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/asimov-modules/asimov-jq-module)
 
 [ASIMOV]: https://github.com/asimov-platform
+[Python]: https://python.org
+[Rust]: https://rust-lang.org
 [jq]: https://en.wikipedia.org/wiki/Jq_(programming_language)
