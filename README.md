@@ -4,6 +4,7 @@
 [![Package on Crates.io](https://img.shields.io/crates/v/asimov-jq-module.svg)](https://crates.io/crates/asimov-jq-module)
 [![Package on PyPI](https://img.shields.io/pypi/v/asimov-jq-module.svg)](https://pypi.org/project/asimov-jq-module)
 [![Package on RubyGems](https://img.shields.io/gem/v/asimov-jq-module.svg)](https://rubygems.org/gems/asimov-jq-module)
+[![Package on NPM](https://img.shields.io/npm/v/asimov-jq-module.svg)](https://npmjs.com/package/asimov-jq-module)
 
 [ASIMOV] module for JSON transformation using the [jq] filter language.
 
@@ -30,6 +31,12 @@ pip install -U asimov-jq-module
 
 ```bash
 gem install asimov-jq-module
+```
+
+### Installation from NPM
+
+```bash
+npm install -g asimov-jq-module
 ```
 
 ### Installation from Source Code
@@ -67,6 +74,7 @@ git clone https://github.com/asimov-modules/asimov-jq-module.git
 [![Share on LinkedIn](https://img.shields.io/badge/share%20on-linkedin-3949AB?logo=linkedin)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/asimov-modules/asimov-jq-module)
 
 [ASIMOV]: https://github.com/asimov-platform
+[NPM]: https:/npmjs.org
 [Python]: https://python.org
 [Ruby]: https://ruby-lang.org
 [Rust]: https://rust-lang.org
