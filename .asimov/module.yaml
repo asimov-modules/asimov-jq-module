@@ -1,0 +1,14 @@
+# See: https://github.com/asimov-modules/asimov-template-module/blob/master/.asimov/module.yaml
+---
+name: jq
+label: JQ
+summary: JSON transformation using the jq filter language.
+links:
+  - https://github.com/asimov-modules/asimov-jq-module
+  - https://crates.io/crates/asimov-jq-module
+  - https://pypi.org/project/asimov-jq-module
+  - https://rubygems.org/gems/asimov-jq-module
+  - https://npmjs.com/package/asimov-jq-module
+
+flows:
+  - asimov-jq-runner
