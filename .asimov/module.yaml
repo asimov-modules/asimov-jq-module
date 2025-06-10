@@ -10,5 +10,6 @@ links:
   - https://rubygems.org/gems/asimov-jq-module
   - https://npmjs.com/package/asimov-jq-module
 
-flows:
-  - asimov-jq-runner
+provides:
+  flows:
+    - asimov-jq-runner
