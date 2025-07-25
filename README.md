@@ -5,6 +5,7 @@
 [![Package on PyPI](https://img.shields.io/pypi/v/asimov-jq-module.svg)](https://pypi.org/project/asimov-jq-module)
 [![Package on RubyGems](https://img.shields.io/gem/v/asimov-jq-module.svg)](https://rubygems.org/gems/asimov-jq-module)
 [![Package on NPM](https://img.shields.io/npm/v/asimov-jq-module.svg)](https://npmjs.com/package/asimov-jq-module)
+[![Documentation](https://docs.rs/asimov-jq-module/badge.svg)](https://docs.rs/asimov-jq-module)
 
 [ASIMOV] module for JSON transformation using the [jq] filter language.
 
@@ -20,6 +21,12 @@
 - [Rust] 1.85+ (2024 edition) if building from source code
 
 ## ⬇️ Installation
+
+### Installation with the [ASIMOV CLI]
+
+```bash
+asimov module install jq -v
+```
 
 ### Installation from PyPI
 
@@ -47,17 +54,39 @@ cargo install asimov-jq-module
 
 ## 👉 Examples
 
-### Transforming JSON Input
+### JSON Transformation
 
 ```bash
 asimov-jq-runner filter.jq < input.json > output.json
 ```
+
+## ⚙ Configuration
+
+This module requires no configuration.
 
 ## 📚 Reference
 
 ### Installed Binaries
 
 - `asimov-jq-runner`: filters JSON from standard input to standard output
+
+### `asimov-jq-runner`
+
+```
+asimov-jq-runner
+
+Usage: asimov-jq-runner [OPTIONS] <FILTER>
+
+Arguments:
+  <FILTER>  The `.jq` filter file to execute
+
+Options:
+  -d, --debug       Enable debugging output
+      --license     Show license information
+  -v, --verbose...  Enable verbose output (may be repeated for more verbosity)
+  -V, --version     Print version information
+  -h, --help        Print help
+```
 
 ## 👨‍💻 Development
 
@@ -73,9 +102,14 @@ git clone https://github.com/asimov-modules/asimov-jq-module.git
 [![Share on Facebook](https://img.shields.io/badge/share%20on-fb-1976D2?logo=facebook)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/asimov-modules/asimov-jq-module)
 [![Share on LinkedIn](https://img.shields.io/badge/share%20on-linkedin-3949AB?logo=linkedin)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/asimov-modules/asimov-jq-module)
 
-[ASIMOV]: https://github.com/asimov-platform
+[ASIMOV]: https://asimov.sh
+[ASIMOV CLI]: https://cli.asimov.sh
+[JSON-LD]: https://json-ld.org
+[KNOW]: https://know.dev
+[Mbox]: https://en.wikipedia.org/wiki/Mbox
 [NPM]: https:/npmjs.org
 [Python]: https://python.org
+[RDF]: https://www.w3.org/TR/rdf12-primer/
 [Ruby]: https://ruby-lang.org
 [Rust]: https://rust-lang.org
 [jq]: https://en.wikipedia.org/wiki/Jq_(programming_language)
